@@ -1,5 +1,3 @@
 out/
 dist/
 *.bin
-
-output.json
