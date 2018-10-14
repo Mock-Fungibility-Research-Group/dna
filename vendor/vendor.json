@@ -1,0 +1,47 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "b+hYFkbe6WkzFh5VMO3RVlDZpKw=",
+			"path": "cryptopepe.io/cryptopepe-reader/pepe",
+			"revision": "652eadc28bc73a8b05aea686f2e63689530633e0",
+			"revisionTime": "2018-10-10T04:23:44Z"
+		},
+		{
+			"checksumSHA1": "X/ErqHwXWwIAxkLkgkKLR1qY/w0=",
+			"path": "cryptopepe.io/cryptopepe-svg/builder/look",
+			"revision": "1876ac42fdd4d124b861ab62b52576b55d052681",
+			"revisionTime": "2018-10-13T10:38:52Z"
+		},
+		{
+			"checksumSHA1": "qpEpl35oKsn3zTKgfVPF4i8+qio=",
+			"origin": "cryptopepe.io/cryptopepe-reader/vendor/github.com/lucasb-eyer/go-colorful",
+			"path": "github.com/lucasb-eyer/go-colorful",
+			"revision": "c2dbd09cbf70b01363eae0ee33e5f40cd69bcdc6",
+			"revisionTime": "2018-06-07T23:01:41Z"
+		},
+		{
+			"checksumSHA1": "l56vURlq/wfKmKmT6ftqlllDH/w=",
+			"origin": "cryptopepe.io/cryptopepe-reader/vendor/github.com/ethereum/go-ethereum/common",
+			"path": "github.com/ethereum/go-ethereum/common",
+			"revision": "c2dbd09cbf70b01363eae0ee33e5f40cd69bcdc6",
+			"revisionTime": "2018-06-07T23:01:41Z"
+		},
+		{
+			"checksumSHA1": "tMtGtURWx29lWZYsLtLOQaPvGqs=",
+			"origin": "cryptopepe.io/cryptopepe-reader/vendor/github.com/ethereum/go-ethereum/common/hexutil",
+			"path": "github.com/ethereum/go-ethereum/common/hexutil",
+			"revision": "c2dbd09cbf70b01363eae0ee33e5f40cd69bcdc6",
+			"revisionTime": "2018-06-07T23:01:41Z"
+		},
+		{
+			"checksumSHA1": "pQzUVRi0z/3Z4FpRyExSg1ROLSA=",
+			"origin": "cryptopepe.io/cryptopepe-reader/vendor/github.com/ethereum/go-ethereum/crypto/sha3",
+			"path": "github.com/ethereum/go-ethereum/crypto/sha3",
+			"revision": "c2dbd09cbf70b01363eae0ee33e5f40cd69bcdc6",
+			"revisionTime": "2018-06-07T23:01:41Z"
+		}
+	],
+	"rootPath": "cryptopepe.io/cryptopepe-dna"
+}
