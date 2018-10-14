@@ -6,14 +6,18 @@ import (
 	"fmt"
 	"encoding/json"
 	"io/ioutil"
+	"bytes"
 )
 
 func main() {
 	propSpec := buildTypePartDnaTable()
-	propSpecJson, _ := json.Marshal(propSpec)
-	propSpecJsonStr := string(propSpecJson)
-	err := ioutil.WriteFile("output.json", []byte(propSpecJsonStr), 0644)
-	if err != nil {
+	buf := new(bytes.Buffer)
+	enc := json.NewEncoder(buf)
+	enc.SetEscapeHTML(false)
+	if err := enc.Encode(propSpec); err != nil {
+		panic(err)
+	}
+	if err := ioutil.WriteFile("output.json", buf.Bytes(), 0644); err != nil {
 		panic(err)
 	}
 }
@@ -70,7 +74,7 @@ var geneBitMasks = [12]uint32{
 }
 
 func runTypeGeneSimulation(locus Locus, expressor pepe.GeneExpressor, lookObj *look.PepeLook, prop *string) []*DnaBitSpec {
-	specs := make([]*DnaBitSpec, locus.Len)
+	specs := make([]*DnaBitSpec, locus.Len, locus.Len)
 	for i := uint(0); i < locus.Len; i++ {
 		bitspec := new(DnaBitSpec)
 		bitspec.BitIndex = i
@@ -78,7 +82,7 @@ func runTypeGeneSimulation(locus Locus, expressor pepe.GeneExpressor, lookObj *l
 		bitspec.Chances1 = make(map[string]float32)
 		bitspec.Chances0Dom = make(map[string]float32)
 		bitspec.Chances1Dom = make(map[string]float32)
-		specs = append(specs, bitspec)
+		specs[i] = bitspec
 	}
 	maxAllelNum := uint32(1) << locus.Len
 	for allel := uint32(0); allel < maxAllelNum; allel++ {
@@ -106,13 +110,13 @@ func runTypeGeneSimulation(locus Locus, expressor pepe.GeneExpressor, lookObj *l
 			}
 		}
 	}
-	normalizer := float32(maxAllelNum)
+	//normalizer := float32(maxAllelNum)
 	for _, spec := range specs {
 		for k, v := range spec.Chances0 {
-			spec.Chances1[k] = v / normalizer
-			spec.Chances0[k] = v / normalizer
-			spec.Chances1Dom[k] = v / normalizer
-			spec.Chances0Dom[k] = v / normalizer
+			spec.Chances1[k] = v
+			spec.Chances0[k] = v
+			spec.Chances1Dom[k] = v
+			spec.Chances0Dom[k] = v
 		}
 	}
 	return specs
