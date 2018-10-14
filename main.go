@@ -59,6 +59,7 @@ var typeGenes = map[Locus]ExpressorAssignment{
 
 type DnaBitSpec struct {
 	BitIndex uint `json:"geneIndex"`
+	MaxCount uint `json:"max"`
 	Chances0 map[string]float32 `json:"c0"`
 	Chances1 map[string]float32 `json:"c1"`
 	Chances0Dom map[string]float32 `json:"c0dom"`
@@ -90,6 +91,7 @@ func runTypeGeneSimulation(locus Locus, expressor pepe.GeneExpressor, lookObj *l
 		*prop = ""
 		expressor(allel, lookObj)
 		for i := uint(0); i < locus.Len; i++ {
+			specs[i].MaxCount = maxAllelNum
 			// Every value is 0 by default, just add 1
 			if allel & geneBitMasks[i] == 0 {
 				specs[i].Chances0[*prop] += 1.0
