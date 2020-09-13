@@ -1,6 +1,6 @@
 # Mock Fungible genetic simulation code
 
-The easy way to get DNA of a pepe, but a little more difficult to write the spec:
+The easy way to fuse two attributes.
 
 # API format
 
@@ -147,7 +147,7 @@ Note: the chances of each bit randomly mutating are not strictly independent. An
 ```
 
 
-#### Chance of getting a property **with known `P` and `Q`**
+#### Chance of getting a attribute *with known `P` and `Q`**
 
 ```
 spec = outputJSON array
