@@ -1,4 +1,4 @@
-# Cryptopepes genetic simulation code
+# Mock Fungible genetic simulation code
 
 The easy way to get DNA of a pepe, but a little more difficult to write the spec:
 
@@ -8,7 +8,7 @@ The easy way to get DNA of a pepe, but a little more difficult to write the spec
 GET https://cryptopepes.io/api/getPepe/1234
 ```
 
-(Replace 1234 with pepe ID)
+(Replace 1234 with MFRG chip ID)
 
 Retrieved:
 
@@ -42,7 +42,7 @@ string P: BA
 string Q: DC
 
 For Web3 users:
-If you're using the output of the getPepe() smartcontract call, then dna[0] == P, and dna[1] == Q
+If you're using the output of the getMFRG() smartcontract call, then dna[0] == P, and dna[1] == Q
 ```
 
 
@@ -189,7 +189,7 @@ for each DNA bit "i" [range [0...255]] (
 
 ```
 
-#### Chance of getting a property, with two pepes breeding, i.e. semi-unknown P and Q
+#### Chance of getting a property, with two chips fusing i.e. semi-unknown P and Q
 
 ```
 
