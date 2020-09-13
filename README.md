@@ -1,4 +1,4 @@
-# Mock Fungible fusion simulation
+# Mock Fungible attribute fusion simulation
 
 The easy way to fuse two attributes.
 
