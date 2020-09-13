@@ -100,7 +100,7 @@ The lower the `totalChance`, the more likely it is the property will change by a
  and the less certain we are about the stability of the estimations for this dna.
 
 
-#### Chance of getting rid of a property
+#### Chance of getting rid of an attribute
 
 
 ```
@@ -147,7 +147,7 @@ Note: the chances of each bit randomly mutating are not strictly independent. An
 ```
 
 
-#### Chance of getting a attribute *with known `P` and `Q`**
+#### Chance of getting an attribute *with known `P` and `Q`**
 
 ```
 spec = outputJSON array
@@ -189,7 +189,7 @@ for each DNA bit "i" [range [0...255]] (
 
 ```
 
-#### Chance of getting a property, with two chips fusing i.e. semi-unknown P and Q
+#### Chance of acquiring an attribute, within the fusion of two chips i.e. semi-unknown P and Q
 
 ```
 
